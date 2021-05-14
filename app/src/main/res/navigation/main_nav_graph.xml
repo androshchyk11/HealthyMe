@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.bt.healthyme.view.fragments.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.bt.healthyme.view.fragments.TrainingFragment"
+        android:label="TrainingFragment"
+        tools:layout="@layout/fragment_training">
+        <action
+            android:id="@+id/action_trainingFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.bt.healthyme.view.fragments.StatisticsFragment"
+        android:label="StatisticsFragment"
+        tools:layout="@layout/fragment_statistics" />
+
+
+</navigation>
